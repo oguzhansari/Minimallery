@@ -65,6 +65,8 @@
                         $('.ff-left', minimallery).trigger("click");
                     } else if (e.keyCode == 39) {
                         $('.ff-right', minimallery).trigger("click");
+                    } else if (e.keyCode == 27) {
+                        $('.ff-close', minimallery).trigger("click");
                     }
                     return false;
                 }
