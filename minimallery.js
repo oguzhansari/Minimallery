@@ -20,10 +20,10 @@
                     normalSizeImgs += '<div class="img-ctn" data-minimallery-img-id="' + i + '"><figure><img src="' + imgArrays[i] + '" /></figure></div>';
                     thumbSizeImgs += '<li data-minimallery-thumb-id="' + i + '"><figure><img src="' + thumbsArrays[i] + '" /></figure></li>';
                 }
-                var minimalleryHTML = '<div class="ff-galleries" id="' + GID + '"><div class="ff-minimallery-ctn"><a href="#" class="ff-close"><img src="Assets/img/icon-minimallery-close.png" /></a>'
-                                + '<div class="ff-minimallery-content"><div class="ff-minimallery-title">' + GTitle + '</div><a href="#" class="ff-leftright ff-left"><span><img src="Assets/img/icon-minimallery-arrow-left.png" /></span></a><div class="ff-minimallery-images">'
+                var minimalleryHTML = '<div class="ff-galleries" id="' + GID + '"><div class="ff-minimallery-ctn"><a href="#" class="ff-close"><img src="icon-minimallery-close.png" /></a>'
+                                + '<div class="ff-minimallery-content"><div class="ff-minimallery-title">' + GTitle + '</div><a href="#" class="ff-leftright ff-left"><span><img src="icon-minimallery-arrow-left.png" /></span></a><div class="ff-minimallery-images">'
                                 + normalSizeImgs
-                                + '</div><a href="#" class="ff-leftright ff-right"><span><img src="Assets/img/icon-minimallery-arrow-right.png" /></span></a><div class="ff-minimallery-thumbs"><nav><ul>'
+                                + '</div><a href="#" class="ff-leftright ff-right"><span><img src="icon-minimallery-arrow-right.png" /></span></a><div class="ff-minimallery-thumbs"><nav><ul>'
                                 + thumbSizeImgs
                                 + '</ul></nav></div></div></div></div>';
                 $('body').append(minimalleryHTML);
