@@ -2,7 +2,7 @@
     'use strict';
     $.fn.minimallery = function (o) {
         var o = jQuery.extend({
-            id: "glry-" + randomcode(20)
+            id: "minimallery-" + randomcode(20)
         }, o);
         return this.each(function () {
             var GT = $(this);
