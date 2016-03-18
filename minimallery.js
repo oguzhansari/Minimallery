@@ -1,8 +1,8 @@
 (function ($) {
     'use strict';
-    $.fn.minimallery = function (o) {
+    $.fn.ffminimallery = function (o) {
         var o = jQuery.extend({
-            id: "minimallery-" + randomcode(20)
+            id: "glry-" + randomcode(20)
         }, o);
         return this.each(function () {
             var GT = $(this);
@@ -20,17 +20,17 @@
                     normalSizeImgs += '<div class="img-ctn" data-minimallery-img-id="' + i + '"><figure><img src="' + imgArrays[i] + '" /></figure></div>';
                     thumbSizeImgs += '<li data-minimallery-thumb-id="' + i + '"><figure><img src="' + thumbsArrays[i] + '" /></figure></li>';
                 }
-                var minimalleryHTML = '<div class="ff-galleries" id="' + GID + '"><div class="ff-minimallery-ctn"><a href="#" class="ff-close"><img src="icon-minimallery-close.png" /></a>'
-                                + '<div class="ff-minimallery-content"><div class="ff-minimallery-title">' + GTitle + '</div><a href="#" class="ff-leftright ff-left"><span><img src="icon-minimallery-arrow-left.png" /></span></a><div class="ff-minimallery-images">'
+                var minimalleryHTML = '<div class="minimallery" id="' + GID + '"><div class="minimallery-ctn"><a href="#" class="ff-close"><img src="Assets/img/icon-minimallery-close.png" /></a>'
+                                + '<div class="minimallery-content"><div class="minimallery-title">' + GTitle + '</div><a href="#" class="ff-leftright ff-left"><span><img src="Assets/img/icon-minimallery-arrow-left.png" /></span></a><div class="minimallery-images">'
                                 + normalSizeImgs
-                                + '</div><a href="#" class="ff-leftright ff-right"><span><img src="icon-minimallery-arrow-right.png" /></span></a><div class="ff-minimallery-thumbs"><nav><ul>'
+                                + '</div><a href="#" class="ff-leftright ff-right"><span><img src="Assets/img/icon-minimallery-arrow-right.png" /></span></a><div class="minimallery-thumbs"><nav><ul>'
                                 + thumbSizeImgs
                                 + '</ul></nav></div></div></div></div>';
                 $('body').append(minimalleryHTML);
                 var minimallery = $('#' + GID);
                 minimallery.css({ 'display': 'block', 'opacity': 0 }).animate({ 'opacity': 1 }, 750);
-                $('.ff-minimallery-thumbs ul li', minimallery).click(function () {
-                    $('.ff-minimallery-thumbs ul li', minimallery).removeClass('active');
+                $('.minimallery-thumbs ul li', minimallery).click(function () {
+                    $('.minimallery-thumbs ul li', minimallery).removeClass('active');
                     $(this).addClass('active');
                     GClicker($(this).attr('data-minimallery-thumb-id'));
                     return false;
@@ -41,20 +41,20 @@
                 });
                 $('.ff-left', minimallery).click(function () {
                     var nid = activeImg == 0 ? total : (parseInt(activeImg) - 1);
-                    $('.ff-minimallery-thumbs ul li[data-minimallery-thumb-id="' + nid + '"]', minimallery).trigger("click");
+                    $('.minimallery-thumbs ul li[data-minimallery-thumb-id="' + nid + '"]', minimallery).trigger("click");
                     return false;
                 });
                 $('.ff-right', minimallery).click(function () {
                     var nid = activeImg == total ? 0 : (parseInt(activeImg) + 1);
-                    $('.ff-minimallery-thumbs ul li[data-minimallery-thumb-id="' + nid + '"]', minimallery).trigger("click");
+                    $('.minimallery-thumbs ul li[data-minimallery-thumb-id="' + nid + '"]', minimallery).trigger("click");
                     return false;
                 });
                 function GClicker(nid) {
-                    $('.ff-minimallery-images .img-ctn[data-minimallery-img-id="' + activeImg + '"]', minimallery).removeClass('active');
-                    $('.ff-minimallery-images .img-ctn[data-minimallery-img-id="' + nid + '"]', minimallery).addClass('active');
+                    $('.minimallery-images .img-ctn[data-minimallery-img-id="' + activeImg + '"]', minimallery).removeClass('active');
+                    $('.minimallery-images .img-ctn[data-minimallery-img-id="' + nid + '"]', minimallery).addClass('active');
                     activeImg = nid;
                 }
-                $('.ff-minimallery-thumbs ul li[data-minimallery-thumb-id="' + activeImg + '"]', minimallery).trigger("click");
+                $('.minimallery-thumbs ul li[data-minimallery-thumb-id="' + activeImg + '"]', minimallery).trigger("click");
                 $(minimallery).hover(function () {
                     $("body").attr("onKeyDown", "$.doKey(event); return false;");
                 }, function () {
