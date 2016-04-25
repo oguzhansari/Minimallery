@@ -30,7 +30,7 @@ jQuery 2.2.2 ( http://www.jquery.com )
 Aşağıdaki kodları &lt;head&gt; tagı içerisine yerleştirin.
 
 ```sh
-<link rel="stylesheet" href="minimallerss">
+<link rel="stylesheet" href="minimallery.css">
 <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
 <script src="minimallery.js"></script>
 ```
