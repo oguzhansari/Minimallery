@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="//raw.githubusercontent.com/oguzhansari/Minimallery/master/minimallery.css">
+<script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
+<script src="//raw.githubusercontent.com/oguzhansari/Minimallery/master/minimallery.js"></script>
+
 # Minimallery
 
 jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş mini gallery uygulaması.
@@ -41,3 +45,8 @@ Yukarıdaki örnek kodları sitenize entegre edin ve kullanmaya başlayın.
 > Oğuzhan SARI
 > os@oguzhansari.com
 > www.oguzhansari.com
+
+
+### Preivew
+<a href="#" data-minimallery="GALLERY TITLE" data-minimallery-imgs="['gallery-1.jpg','gallery-2.jpg','gallery-3.jpg','gallery-4.jpg']" data-minimallery-thumbs="['gallery-t-1.jpg','gallery-t-2.jpg','gallery-t-3.jpg','gallery-t-4.jpg']"></a>
+
